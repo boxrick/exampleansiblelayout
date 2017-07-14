@@ -1,0 +1,21 @@
+---
+## General host vars - to be overriden at host level
+local_name: "
+local_group: [ ]
+local_ip: ""
+
+# Network Interfaces
+template_interfaces:
+  - device: eth0
+    bootproto: static
+    ip: "{{ local_ip }}"
+    gateway: "10.0.0.1"
+    netmask: "255.255.254.0"
+    dns_search: "example.domain.com"
+    dns_nameservers: "8.8.4.4"
+
+# Host List
+list_items:
+  - name: "{{ local_name }}"
+    group: "{{ local_group }}"
+    interfaces: "{{ template_interfaces }}"

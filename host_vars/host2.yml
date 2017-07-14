@@ -1,0 +1,6 @@
+---
+local_name: host2
+local_group: [ containers ]
+
+# Network
+local_ip: 172.16.0.11

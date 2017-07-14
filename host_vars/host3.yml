@@ -1,0 +1,6 @@
+---
+local_name: host3
+local_group: [ baremetal ]
+
+# Network
+local_ip: 10.0.0.2
